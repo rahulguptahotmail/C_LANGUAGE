@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int Number;
+    printf("Enter Number : ");
+    scanf("%d", &Number);
+    int Remainder;
+    int Array[25];
+    int Iterater = 1;
+    while (Number != 0)
+    {
+        if (Number % 2 == 0)
+        {
+            Remainder = 0;
+        }
+        else
+        {
+            Remainder = 1;
+        }
+        Number = Number / 2;
+        Array[Iterater] = Remainder;
+        Iterater++;
+    }
+    while (Iterater != 1)
+    {
+        Iterater--;
+        printf("%d", Array[Iterater]);
+    }
+
+    return 0;
+}
